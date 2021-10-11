@@ -17,7 +17,7 @@ public class KortSamling {
 	private Kort[] samling;
 	private int antall;
 	
-	// TEST
+	// TEST igjen
 
 	/**
 	 * Oppretter en tom Kortsamling med plass til MAKS_KORT (hele kortstokken).
