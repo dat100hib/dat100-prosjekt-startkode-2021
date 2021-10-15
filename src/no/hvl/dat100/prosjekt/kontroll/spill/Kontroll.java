@@ -15,7 +15,7 @@ public class Kontroll {
 	private Spill spill;
 
 	public Kontroll() {
-
+		
 	}
 
 	public void startSpill() {
@@ -59,7 +59,6 @@ public class Kontroll {
 	}
 
 	private ISpiller turSpiller() {
-
 		ISpiller spiller = null;
 
 		if (erSydTur()) {
@@ -129,6 +128,7 @@ public class Kontroll {
 	}
 
 	public void handlingSpiller(ISpiller spiller) {
+		
 		Handling handling = spill.nesteHandling(spiller);
 
 		if (dommer.sjekkHandling(spiller, handling)) {
@@ -218,22 +218,15 @@ public class Kontroll {
 	 * @return true dersom kortet er lovlig å spille, false ellers.
 	 */
 	private boolean spillkortSyd(Kort kort) {
-		
-		// TODO - START
 		return spill.leggnedKort(spill.getSyd(), kort);
-		
-		// throw new UnsupportedOperationException(TODO.method());
-		// return null;
-		// TODO - END
 	}
 	
 	// kaldes ved klikk på et kort hos syd.
 	public boolean leggnedKortSyd(Kort kort) {
 
 		boolean ok;
-
 		ISpiller spiller = spill.getSyd();
-
+		
 		Handling handling = new Handling(HandlingsType.LEGGNED, kort);
 
 		ok = dommer.sjekkHandling(spiller, handling);
@@ -270,7 +263,6 @@ public class Kontroll {
 	}
 
 	public void spillAuto() {
-
 		while (!harVinner()) {
 
 			ISpiller spiller = turSpiller();
